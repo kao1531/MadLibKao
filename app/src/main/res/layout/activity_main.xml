@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:padding="@dimen/padding"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/adjectiveText"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginStart="@dimen/marginStart"
+            android:layout_marginTop="@dimen/marginTop"
+            android:text="Adjective: "
+            android:textColor="@color/adjective"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/adjective"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginEnd"
+            android:hint="                    "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nounText"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginStart="@dimen/marginStart"
+            android:layout_marginTop="@dimen/marginTop"
+            android:text="Noun: "
+            android:textColor="@color/noun"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adjectiveText" />
+
+        <EditText
+            android:id="@+id/noun"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginEnd"
+            android:hint="                    "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adjective" />
+
+        <TextView
+            android:id="@+id/verbText"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginStart="@dimen/marginStart"
+            android:layout_marginTop="@dimen/marginTop"
+            android:text="Verb: "
+            android:textColor="@color/verb"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nounText" />
+
+        <EditText
+            android:id="@+id/verb"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginEnd"
+            android:hint="                    "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noun" />
+
+        <TextView
+            android:id="@+id/animalText"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginStart="@dimen/marginStart"
+            android:layout_marginTop="@dimen/marginTop"
+            android:text="Animal: "
+            android:textColor="@color/animal"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verbText" />
+
+        <EditText
+            android:id="@+id/animal"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginEnd"
+            android:hint="                    "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verb" />
+
+        <TextView
+            android:id="@+id/placeText"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginStart="@dimen/marginStart"
+            android:layout_marginTop="@dimen/marginTop"
+            android:text="Place: "
+            android:textColor="@color/place"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/animalText" />
+
+        <EditText
+            android:id="@+id/place"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginEnd"
+            android:hint="                    "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/animal" />
+
+        <TextView
+            android:id="@+id/colorText"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginStart="@dimen/marginStart"
+            android:layout_marginTop="@dimen/marginTop"
+            android:text="Color: "
+            android:textColor="@color/color"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/placeText" />
+
+        <EditText
+            android:id="@+id/color"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginEnd"
+            android:hint="                    "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/place" />
+
+        <TextView
+            android:id="@+id/numberText"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginStart="@dimen/marginStart"
+            android:layout_marginTop="@dimen/marginTop"
+            android:text="Number: "
+            android:textColor="@color/number"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/colorText" />
+
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="@dimen/layoutHeight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginEnd="@dimen/marginEnd"
+            android:hint="                    "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/color" />
+
+        <!-- <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/buttonEnd"
+        android:layout_marginBottom="@dimen/marginBotton"
+        android:text="SUBMIT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+        -->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
