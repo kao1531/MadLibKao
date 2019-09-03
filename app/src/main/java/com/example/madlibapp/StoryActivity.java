@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class StoryActivity extends AppCompatActivity {
@@ -16,6 +17,7 @@ public class StoryActivity extends AppCompatActivity {
     public static final String MY_NUMBER = "number";
     public static final String MY_PLACE = "place";
     public static final String MY_NAME = "name";
+    String strToDisplay;
 
 
     @Override
@@ -34,13 +36,23 @@ public class StoryActivity extends AppCompatActivity {
         String myPlace = intent.getStringExtra(MY_PLACE);
         String myName = intent.getStringExtra(MY_NAME);
 
-        String strToDisplay = "Once upon a time, in a(n) " + myAdjective + " city, a(n) " + myNoun + " lived in a(n) " + myPlace + ". The " + myNoun + " decided one day to get a pet. The "
-                + myNoun + " thought that a(n) " + myAnimal + " would be a great pet! In the " + myAdjective + " city, " + myNoun + " " + myVerb +  "ed to a pet store selling interesting looking pets. " +
+        strToDisplay = "Once upon a time, in a(n) " + myAdjective + " city, a(n) " + myNoun + " lived in a(n) " + myPlace + ". The " + myNoun + " decided one day to get a pet. The "
+                + myNoun + " thought that a(n) " + myAnimal + " would be a great pet! In the " + myAdjective + " city, " + myNoun + " " + myVerb +  " to a pet store selling interesting looking pets. " +
                 "There were colors of all kinds but " + myNoun + " decided to choose the " + myColor + " " + myAnimal + ". What was most interesting of all was that the "
                 + myColor + " " + myAnimal + " had " + myNumber + " hearts. The " + myNoun + " decided to name the " + myColor + " " + myAnimal + ", " + myName + ". The " + myNoun + " and " + myName +
             " lived happily ever after in the " + myAdjective + " city."
         ;
         TextView str = (TextView) findViewById(R.id.story);
         str.setText(strToDisplay);
+    }
+
+    public void shareInfo (View v)
+    {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, strToDisplay);
+        String chooserTitle = "Choose an app to send to";
+        Intent chosenIntent = Intent.createChooser(intent, chooserTitle);
+        startActivity(chosenIntent);
     }
 }
