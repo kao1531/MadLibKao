@@ -10,5 +10,6 @@
     <color name="place">#8F51FF</color>
     <color name="color">#FA9400</color>
     <color name="number">#E00000</color>
+    <color name="name">#000000</color>
     <color name="background">#FCE8FF</color>
 </resources>

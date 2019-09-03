@@ -15,6 +15,8 @@ public class StoryActivity extends AppCompatActivity {
     public static final String MY_ANIMAL = "animal";
     public static final String MY_NUMBER = "number";
     public static final String MY_PLACE = "place";
+    public static final String MY_NAME = "name";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +32,15 @@ public class StoryActivity extends AppCompatActivity {
         String myAnimal = intent.getStringExtra(MY_ANIMAL);
         String myNumber = intent.getStringExtra(MY_NUMBER);
         String myPlace = intent.getStringExtra(MY_PLACE);
+        String myName = intent.getStringExtra(MY_NAME);
 
-        String strToDisplay = "Story";
-        TextView str = (TextView) findViewById(R.id.info);
+        String strToDisplay = "Once upon a time, in a(n) " + myAdjective + " city, a(n) " + myNoun + " lived in a(n) " + myPlace + ". The " + myNoun + " decided one day to get a pet. The "
+                + myNoun + " thought that a(n) " + myAnimal + " would be a great pet! In the " + myAdjective + " city, " + myNoun + " " + myVerb +  "ed to a pet store selling interesting looking pets. " +
+                "There were colors of all kinds but " + myNoun + " decided to choose the " + myColor + " " + myAnimal + ". What was most interesting of all was that the "
+                + myColor + " " + myAnimal + " had " + myNumber + " hearts. The " + myNoun + " decided to name the " + myColor + " " + myAnimal + ", " + myName + ". The " + myNoun + " and " + myName +
+            " lived happily ever after in the " + myAdjective + " city."
+        ;
+        TextView str = (TextView) findViewById(R.id.story);
         str.setText(strToDisplay);
     }
 }

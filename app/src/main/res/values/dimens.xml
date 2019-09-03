@@ -3,9 +3,9 @@
     <dimen name="padding">8dp</dimen>
     <dimen name="marginStart">40dp</dimen>
     <dimen name="marginTop">40dp</dimen>
-    <dimen name="marginEnd">120dp</dimen>
+    <dimen name="marginEnd">90dp</dimen>
     <dimen name="layoutWidth">100dp</dimen>
-    <dimen name="layoutHeight">30dp</dimen>
-    <dimen name="marginBotton">90dp</dimen>
+    <dimen name="layoutHeight">40dp</dimen>
+    <dimen name="marginBottom">40dp</dimen>
     <dimen name="buttonEnd">130dp</dimen>
 </resources>
