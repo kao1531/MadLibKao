@@ -51,8 +51,9 @@ public class StoryActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, strToDisplay);
-        String chooserTitle = "Choose an app to send to";
+        String chooserTitle = "Choose an app to send your message";
         Intent chosenIntent = Intent.createChooser(intent, chooserTitle);
         startActivity(chosenIntent);
     }
+
 }

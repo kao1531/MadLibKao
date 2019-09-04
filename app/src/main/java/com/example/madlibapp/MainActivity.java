@@ -2,10 +2,12 @@ package com.example.madlibapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,31 +29,45 @@ public class MainActivity extends AppCompatActivity {
         EditText number = (EditText) findViewById(R.id.number);
         EditText name = (EditText) findViewById(R.id.name);
 
-        // extracting the text from those edit text fields
-        String adjectiveStr = adjective.getText().toString();
-        String nounStr = noun.getText().toString();
-        String verbStr = verb.getText().toString();
-        String animalStr = animal.getText().toString();
-        String placeStr = place.getText().toString();
-        String colorStr = color.getText().toString();
-        String numberStr = number.getText().toString();
-        String nameStr = name.getText().toString();
+        if (adjective.length() == 0 || noun.length() == 0 || verb.length() == 0 || animal.length() == 0 ||
+                place.length() == 0 || color.length() == 0 || number.length() == 0 || name.length() == 0 ) {
 
-        // Creating the intent object so I can send data
-        Intent intent = new Intent(this,StoryActivity.class);
+            Context context = getApplicationContext();
+            CharSequence text = "Please fill in all fields";
+            int duration = Toast.LENGTH_SHORT;
 
-        // putting data from edit text fields into intent to send to other activity
-        // MY_NAME and MY_AGE are constants in the InfoActivity class
-        intent.putExtra(StoryActivity.MY_ADJECTIVE, adjectiveStr);
-        intent.putExtra(StoryActivity.MY_NOUN, nounStr);
-        intent.putExtra(StoryActivity.MY_VERB, verbStr);
-        intent.putExtra(StoryActivity.MY_ANIMAL, animalStr);
-        intent.putExtra(StoryActivity.MY_PLACE, placeStr);
-        intent.putExtra(StoryActivity.MY_COLOR, colorStr);
-        intent.putExtra(StoryActivity.MY_NUMBER, numberStr);
-        intent.putExtra(StoryActivity.MY_NAME, nameStr);
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
 
-        // loads the next activity
-        startActivity(intent);
+        else
+        {
+            // extracting the text from those edit text fields
+            String adjectiveStr = adjective.getText().toString();
+            String nounStr = noun.getText().toString();
+            String verbStr = verb.getText().toString();
+            String animalStr = animal.getText().toString();
+            String placeStr = place.getText().toString();
+            String colorStr = color.getText().toString();
+            String numberStr = number.getText().toString();
+            String nameStr = name.getText().toString();
+
+            // Creating the intent object so I can send data
+            Intent intent = new Intent(this, StoryActivity.class);
+
+            // putting data from edit text fields into intent to send to other activity
+            // MY_NAME and MY_AGE are constants in the InfoActivity class
+            intent.putExtra(StoryActivity.MY_ADJECTIVE, adjectiveStr);
+            intent.putExtra(StoryActivity.MY_NOUN, nounStr);
+            intent.putExtra(StoryActivity.MY_VERB, verbStr);
+            intent.putExtra(StoryActivity.MY_ANIMAL, animalStr);
+            intent.putExtra(StoryActivity.MY_PLACE, placeStr);
+            intent.putExtra(StoryActivity.MY_COLOR, colorStr);
+            intent.putExtra(StoryActivity.MY_NUMBER, numberStr);
+            intent.putExtra(StoryActivity.MY_NAME, nameStr);
+
+            // loads the next activity
+            startActivity(intent);
+        }
     }
 }
