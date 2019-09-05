@@ -12,4 +12,6 @@
     <color name="number">#E00000</color>
     <color name="name">#000000</color>
     <color name="background">#FCE8FF</color>
+    <color name="text">#5107FF</color>
+    <color name="buttonBackground">#FFFFFF</color>
 </resources>

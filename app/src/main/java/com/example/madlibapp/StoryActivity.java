@@ -36,12 +36,14 @@ public class StoryActivity extends AppCompatActivity {
         String myPlace = intent.getStringExtra(MY_PLACE);
         String myName = intent.getStringExtra(MY_NAME);
 
-        strToDisplay = "Once upon a time, in a(n) " + myAdjective + " city, a(n) " + myNoun + " lived in a(n) " + myPlace + ". The " + myNoun + " decided one day to get a pet. The "
-                + myNoun + " thought that a(n) " + myAnimal + " would be a great pet! In the " + myAdjective + " city, " + myNoun + " " + myVerb +  " to a pet store selling interesting looking pets. " +
-                "There were colors of all kinds but " + myNoun + " decided to choose the " + myColor + " " + myAnimal + ". What was most interesting of all was that the "
-                + myColor + " " + myAnimal + " had " + myNumber + " hearts. The " + myNoun + " decided to name the " + myColor + " " + myAnimal + ", " + myName + ". The " + myNoun + " and " + myName +
-            " lived happily ever after in the " + myAdjective + " city."
-        ;
+        strToDisplay = "Once upon a time, in a(n) " + myAdjective.toUpperCase() + " city, a(n) " + myNoun.toUpperCase() + " lived in a(n) " + myPlace.toUpperCase()
+                + ". The " + myNoun.toUpperCase() + " decided one day to get a pet. The " + myNoun.toUpperCase() + " thought that a(n) " + myAnimal.toUpperCase()
+                + " would be a great pet! In the " + myAdjective.toUpperCase() + " city, " + myNoun.toUpperCase() + " " + myVerb.toUpperCase() +
+                "(ed) to a pet store selling interesting looking pets. " + "There were colors of all kinds but " + myNoun.toUpperCase() + " decided to choose the "
+                + myColor.toUpperCase() + " " + myAnimal.toUpperCase() + ". What was most interesting of all was that the " + myColor.toUpperCase() + " "
+                + myAnimal.toUpperCase() + " had " + myNumber.toUpperCase() + " hearts. The " + myNoun.toUpperCase() + " decided to name the " + myColor.toUpperCase()
+                + " " + myAnimal.toUpperCase() + ", " + myName.toUpperCase() + ". The " + myNoun.toUpperCase() + " and " + myName.toUpperCase() +
+                " lived happily ever after in the " + myAdjective.toUpperCase()+ " city.";
         TextView str = (TextView) findViewById(R.id.story);
         str.setText(strToDisplay);
     }

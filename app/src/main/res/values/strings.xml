@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">MadLibApp</string>
+    <string name="app_name">Mad Libs</string>
+    <string name="adjective">Adjective:</string>
+    <string name="noun">Noun:</string>
+    <string name="verb">Verb:</string>
+    <string name="animal">Animal:</string>
+    <string name="place">Place:</string>
+    <string name="color">Color:</string>
+    <string name="number">Number:</string>
+    <string name="name">Name:</string>
+    <string name="button">SUBMIT</string>
+    <string name="hint">                    </string>
 </resources>
